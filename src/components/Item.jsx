@@ -24,7 +24,7 @@ function Item({item,categoryName}) {
 
   return (
     <div className=" cursor-pointer bg-white p-2 flex items-center justify-center gap-2 sm:gap-5 md:gap:10 rounded-xl shadow-lg shadow-white-500/40 md:max-w-[80%]" >
-        <span className="flex-1" onClick={(e)=>{handleParentClick(e)}}>{name}</span>
+        <span className="flex-1 md:text-lg" onClick={(e)=>{handleParentClick(e)}}>{name}</span>
         <span onClick={handleAddItem}><BiPlus/></span>
     </div>
   )

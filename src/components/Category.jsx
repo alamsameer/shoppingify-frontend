@@ -3,7 +3,7 @@ function Category({ category }) {
     const { categoryName, items } = category
     return (
         <div className="mt-10">
-            <h3 className="font-medium">{categoryName}</h3>
+            <h3 className="font-medium md:text-xl">{categoryName}</h3>
             <div className="pt-6 grid grid-cols-2 lg:grid-cols-4 gap-2">
 
                 {

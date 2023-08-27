@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:3000/api', // Set your API base URL here
+  baseURL: 'https://shoppingify-backend-three.vercel.app/api', // Set your API base URL here
 });
 
 // for items

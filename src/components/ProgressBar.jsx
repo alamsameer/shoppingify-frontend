@@ -1,15 +1,19 @@
 
 
-const ProgressComponent = ({ percentage }) => {
+const ProgressComponent = ({ percentage,name,color }) => {
     const fillStyle = {
-      width: `${percentage}%`,
+        width: `${percentage}%`,
+        backgroundColor:`${color}`
     };
-  
+
     return (
-      <div className="w-48 h-6 bg-lightgray rounded-md overflow-hidden">
-        <div className="h-full bg-green-500 transition-all duration-500" style={fillStyle}></div>
-      </div>
+        <div>
+            <p className="text-sm text-gray-400 font-light">{name}</p>
+            <div className="w-48 md:w-72 h-3  bg-lightgray rounded-md overflow-hidden shadow-md">
+                <div className="h-full transition-all duration-500 rounded-full " style={fillStyle}></div>
+            </div>
+        </div>
     );
-  };
+};
 
 export default ProgressComponent

@@ -1,15 +1,17 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getTopItems, getTopCategories } from "./apiservice.js";
+import { createAsyncThunk ,createSlice, } from "@reduxjs/toolkit";
+import { getTopItems, getTopCategories } from "./apiservice";
 
 export const getTopItemsAsync = createAsyncThunk('statistic/gettopitems', async () => {
-    const response = await getTopItems();
+    const response = await getTopItems(); // Correct usage of await here
     return response.data;
 });
 
 export const getTopCategoriesAsync = createAsyncThunk('statistic/gettopcategories', async () => {
-    const response = await getTopCategories();
+    const response = await getTopCategories(); // Correct usage of await here
     return response.data;
 });
+
+
 
 const initialState = {
     topItems: [],

@@ -24,4 +24,8 @@ export const updateShoppingListName = (data) => instance.put('/shopping-list/upd
 export const getActiveShoppingList = () => instance.get('/shopping-list/active');
 export const getAllShoppingLists = () => instance.get('/shopping-lists');
 
+//  for Statistic
+export const getTopCategories=()=>{instance.get("/top-categories")}
+export const getTopItems=()=>{instance.get("/top-items")}
+
 export default instance;

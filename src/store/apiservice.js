@@ -27,5 +27,6 @@ export const getAllShoppingLists = () => instance.get('/shopping-lists');
 //  for Statistic
 export const getTopCategories=()=>instance.get("/top-categories")
 export const getTopItems=()=>instance.get("/top-items")
+export const getCategoryWithinTimeInterval=(data)=>instance.post("/time-interval",data)
 
 export default instance;

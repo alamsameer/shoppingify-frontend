@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar.jsx"
+import { Outlet } from "react-router-dom"
 import Home from "./pages/Home.jsx"
 import History from "./pages/History.jsx"
 import Statistics from "./pages/Statistics.jsx"
@@ -25,13 +25,7 @@ function App() {
             <Navbar />
             <div className='flex-1 relative  flex   bg-slate-100  text-slate-900'>
                 <div className="flex-1">
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/history" element={<History />} >
-                        </Route>
-                        <Route path="/history/:id" element={<HistoryDetail />} />
-                        <Route path="/stats" element={<Statistics />} />
-                    </Routes>
+                    <Outlet/>
                 </div>
                 {isSideBarVisisble && (
                     <div className="absolute bg-white top-0 right-0 left-0 bottom-0 sm:relative sm:w-80 md:w-96">

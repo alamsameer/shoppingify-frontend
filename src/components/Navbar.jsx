@@ -5,11 +5,15 @@ import { IoStatsChart } from 'react-icons/io5';
 import { GiChewedHeart } from 'react-icons/gi';
 import{toggleSideBar} from "../store/view.js";
 import { useDispatch } from 'react-redux';
+import { logoutuser } from '../store/auth.js';
 
 function Navbar() {
   const dispatch = useDispatch();
   const handletoggleSideBar=()=>{
     dispatch(toggleSideBar())
+  }
+  const Logout=()=>{
+    dispatch(logoutuser())
   }
   return (
     <div className="w-16 sm:w-20  h-screen m-0 bg-slate-50 flex flex-col justify-between items-center  ">
@@ -22,6 +26,9 @@ function Navbar() {
         <SidebarIcons icon={<AiOutlineBars size="22"   />}text='Items' link="/" />
         <SidebarIcons icon={<BsArrowCounterclockwise size="22"  />}text='History' link="/history" />
         <SidebarIcons icon={<IoStatsChart size="22"  />} text='Stats' link='/stats' />
+        <button className='' onClick={()=>{
+          Logout()
+          }}>logout</button>
       </div>
       <div onClick={()=>handletoggleSideBar()}>
         <SidebarIcons icon={<AiOutlineShoppingCart size="25"  />} text='shoppinglist'link={""} />

@@ -2,8 +2,15 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://shoppingify-backend-three.vercel.app/api', // Set your API base URL here
-});
+  baseURL: 'https://shoppingify-backend-seven.vercel.app/api', // Set your API base URL here
+  withCredentials:true,
+},);
+// login 
+export const login = (data) => instance.post('/signin', data);
+// register
+export const register = (data) => instance.post('/signup', data);
+// logout
+export const logout = () => instance.post('/logout');
 
 // for items
 export const fetchItems = () => instance.get('/items');

@@ -1,31 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {
-  RouterProvider,
-} from "react-router-dom";
+import { Routes, Route } from 'react-router-dom'
 import Router from "./Router.jsx"
 import "./index.css"
 import store from './store/main.js'
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App.jsx';
+import { BrowserRouter, Navigate } from 'react-router-dom';
 import CancelConfirmationModal from './components/CancelConfirmationModal.jsx';
+import AppRoutes from './AppRoutes.jsx'
 
-const Main=()=>{
-  return(
-    <React.StrictMode>
-      {/* <RouterProvider router={Router} /> */}
-      <BrowserRouter>
-        <App />
-         {/* Render the modal */}
-       <CancelConfirmationModal/>
-      </BrowserRouter>
-    </React.StrictMode>
-    
+const Main = () => {
+
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+      <CancelConfirmationModal />
+    </BrowserRouter>
+
   )
 }
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <Main/>
+    <Main />
   </Provider>
 )

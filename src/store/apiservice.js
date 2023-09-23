@@ -4,7 +4,7 @@ import axios from 'axios';
 const token=JSON.parse(localStorage.getItem("token"))
 console.log(token);
 const instance = axios.create({
-  baseURL: 'https://shoppingify-backend-seven.vercel.app/api', // Set your API base URL here
+  baseURL: 'https://shoppingify-backend-nu.vercel.app/api', // Set your API base URL here
 },);
 const getToken = () => {
   const token = JSON.parse(localStorage.getItem('token'));
@@ -12,7 +12,7 @@ const getToken = () => {
 };
 
 const authenticatedInstance = axios.create({
-  baseURL: 'https://shoppingify-backend-seven.vercel.app/api',
+  baseURL: 'https://shoppingify-backend-nu.vercel.app/api',
   headers: {
     'Authorization': getToken(),
   },

@@ -5,7 +5,7 @@ import { Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "../store/auth";
 function CheckAuth({children}) {
-    const {user,autherror}=useSelector(state=>state.auth)
+    const {user}=useSelector(state=>state.auth)
     const dispatch=useDispatch()
         useEffect(()=>{
          dispatch(setUser())

@@ -54,7 +54,7 @@ function ShoppingContainer() {
     const uniqueCategories = extractCategories()
     return (
         <div className="absolute bg-white top-0 right-0 left-0 bottom-0 sm:relative sm:w-80 md:w-96">
-            <div className="p-5 bg-orange-300 h-screen relative">
+            <div className="p-5 bg-orange-300 h-screen relative overflow-hidden ">
                 <div className="">
                     <div className="addItem flex place-items-center  gap-10  bg-orange-700 p-2 rounded-xl ">
                         <figure className="">
